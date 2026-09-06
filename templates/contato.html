@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Contato | Impacto Jr Consultoria{% endblock %}
+
+{% block content %}
+<section class="py-16 px-6 max-w-4xl mx-auto">
+    <div class="text-center mb-12">
+        <h1 class="text-xs font-extrabold tracking-widest text-brand-600 uppercase mb-2">Fale Conosco</h1>
+        <h2 class="text-4xl font-black text-dark-900 mb-3">Inicie o seu Projeto</h2>
+        <p class="text-zinc-500 text-sm">Preencha o formulário abaixo ou fale diretamente pelos nossos canais oficiais.</p>
+    </div>
+
+    <div class="bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-zinc-200">
+        {% if sucesso %}
+        <div class="mb-8 p-5 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-2xl text-sm font-semibold flex items-center gap-3">
+            <svg class="w-6 h-6 text-emerald-600 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Obrigado, <strong>{{ nome_cliente }}</strong>! Recebemos sua mensagem com sucesso. Um de nossos consultores entrará em contato em breve.</span>
+        </div>
+        {% endif %}
+
+        <form action="/contato" method="post" class="space-y-6">
+            <div class="grid sm:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-xs font-bold text-zinc-700 uppercase tracking-wider mb-2">Nome Completo</label>
+                    <input type="text" name="nome" required placeholder="Ex: Carlos Silva" class="w-full px-4 py-3 rounded-xl border border-zinc-300 focus:outline-none focus:ring-2 focus:ring-brand-600 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-zinc-700 uppercase tracking-wider mb-2">E-mail Profissional</label>
+                    <input type="email" name="email" required placeholder="carlos@empresa.com" class="w-full px-4 py-3 rounded-xl border border-zinc-300 focus:outline-none focus:ring-2 focus:ring-brand-600 text-sm">
+                </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-xs font-bold text-zinc-700 uppercase tracking-wider mb-2">WhatsApp / Telefone</label>
+                    <input type="tel" name="telefone" required placeholder="(00) 90000-0000" class="w-full px-4 py-3 rounded-xl border border-zinc-300 focus:outline-none focus:ring-2 focus:ring-brand-600 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-zinc-700 uppercase tracking-wider mb-2">Serviço de Interesse</label>
+                    <select name="servico" class="w-full px-4 py-3 rounded-xl border border-zinc-300 focus:outline-none focus:ring-2 focus:ring-brand-600 text-sm bg-white">
+                        <option value="Modelagem e Projetos 3D">Modelagem e Projetos 3D</option>
+                        <option value="Análise e Tratamento de Dados">Análise e Tratamento de Dados</option>
+                        <option value="Climatização e PMOC">Climatização & PMOC</option>
+                        <option value="Gestão de Manutenção">Gestão de Manutenção</option>
+                        <option value="Adequação a Normas (NRs)">Adequação a Normas (NRs)</option>
+                        <option value="Outro">Outro Projeto / Dúvida Geral</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold text-zinc-700 uppercase tracking-wider mb-2">Conte sobre sua necessidade</label>
+                <textarea name="mensagem" rows="5" required placeholder="Descreva brevemente o problema, prazo ou objetivo..." class="w-full px-4 py-3 rounded-xl border border-zinc-300 focus:outline-none focus:ring-2 focus:ring-brand-600 text-sm"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-dark-900 hover:bg-brand-600 text-white font-bold py-4 rounded-xl transition duration-200 shadow-md hover:shadow-lg text-sm uppercase tracking-wider">
+                Enviar Mensagem
+            </button>
+        </form>
+    </div>
+</section>
+{% endblock %}

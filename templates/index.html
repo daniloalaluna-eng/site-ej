@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Impacto Jr Consultoria | Início{% endblock %}
+
+{% block content %}
+<header class="pt-20 pb-16 px-6 max-w-5xl mx-auto text-center">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-100 border border-zinc-200 text-dark-900 text-xs font-extrabold uppercase tracking-wider mb-6">
+        <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
+        Engenharia Mecânica & Consultoria
+    </div>
+    
+    <h1 class="text-4xl sm:text-6xl font-black text-dark-900 tracking-tight leading-tight sm:leading-none mb-6">
+        Inovação técnica para gerar <span class="text-brand-600">impacto real</span> no seu negócio.
+    </h1>
+    
+    <p class="text-lg sm:text-xl text-zinc-600 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
+        Projetos mecânicos, laudos regulatórios e otimização produtiva desenvolvidos por estudantes talentosos, supervisionados por professores mestres e doutores.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contato" class="w-full sm:w-auto bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-4 rounded-xl shadow-md hover:shadow-lg transition">
+            Solicitar Diagnóstico Gratuito
+        </a>
+        <a href="/servicos" class="w-full sm:w-auto bg-white hover:bg-zinc-100 text-dark-900 font-bold px-8 py-4 rounded-xl border border-zinc-300 transition">
+            Conhecer Nossos Serviços
+        </a>
+    </div>
+</header>
+
+<!-- Resumo dos Serviços com Link para a Aba Completa -->
+<section class="py-16 px-6 max-w-6xl mx-auto">
+    <div class="flex justify-between items-end mb-10">
+        <div>
+            <h2 class="text-xs font-extrabold tracking-widest text-brand-600 uppercase mb-1">Especialidades</h2>
+            <h3 class="text-3xl font-black text-dark-900">Soluções Principais</h3>
+        </div>
+        <a href="/servicos" class="text-sm font-bold text-brand-600 hover:underline hidden sm:block">Ver todos os serviços &rarr;</a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl border border-zinc-200 hover:border-brand-600 transition shadow-sm">
+            <div class="w-12 h-12 bg-zinc-900 text-white rounded-xl flex items-center justify-center font-black mb-6">01</div>
+            <h4 class="text-xl font-bold text-dark-900 mb-2">Projetos & Modelagem 3D</h4>
+            <p class="text-sm text-zinc-600 leading-relaxed">Concepção de maquinários, detalhamento 2D/3D e prototipagem de peças sob medida.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl border border-zinc-200 hover:border-brand-600 transition shadow-sm">
+            <div class="w-12 h-12 bg-zinc-900 text-white rounded-xl flex items-center justify-center font-black mb-6">02</div>
+            <h4 class="text-xl font-bold text-dark-900 mb-2">Climatização & PMOC</h4>
+            <p class="text-sm text-zinc-600 leading-relaxed">Plano de Manutenção, Operação e Controle conforme a Lei 13.589/2018 e normas ANVISA.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl border border-zinc-200 hover:border-brand-600 transition shadow-sm">
+            <div class="w-12 h-12 bg-zinc-900 text-white rounded-xl flex items-center justify-center font-black mb-6">03</div>
+            <h4 class="text-xl font-bold text-dark-900 mb-2">Gestão de Manutenção</h4>
+            <p class="text-sm text-zinc-600 leading-relaxed">Planos preventivos para eliminar paradas inesperadas e elevar a vida útil de ativos.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

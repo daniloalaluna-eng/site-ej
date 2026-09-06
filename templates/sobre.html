@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Sobre Nós | Impacto Jr Consultoria{% endblock %}
+
+{% block content %}
+<section class="py-16 px-6 max-w-5xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+        <h1 class="text-xs font-extrabold tracking-widest text-brand-600 uppercase mb-2">Quem Somos</h1>
+        <h2 class="text-4xl font-black text-dark-900 mb-6">Talento universitário focado em soluções reais</h2>
+        <p class="text-zinc-600 text-lg leading-relaxed">
+            A <strong>Impacto Jr Consultoria</strong> é uma associação civil sem fins lucrativos gerida por graduandos. Nosso propósito é transformar conhecimento teórico em impacto produtivo tangível.
+        </p>
+    </div>
+
+    <!-- Pilares -->
+    <div class="grid md:grid-cols-3 gap-8 mb-20">
+        <div class="bg-white p-8 rounded-2xl border border-zinc-200 text-center">
+            <div class="text-brand-600 font-black text-3xl mb-3">Missão</div>
+            <p class="text-sm text-zinc-600">Formar líderes capacitados por meio da execução de projetos de excelência, impactando positivamente nossos parceiros.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl border border-zinc-200 text-center">
+            <div class="text-brand-600 font-black text-3xl mb-3">Visão</div>
+            <p class="text-sm text-zinc-600">Ser referência regional em consultoria e projetos, reconhecida pela precisão técnica e comprometimento.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl border border-zinc-200 text-center">
+            <div class="text-brand-600 font-black text-3xl mb-3">Valores</div>
+            <p class="text-sm text-zinc-600">Rigor técnico, ética profissional, transparência, inovação contínua e paixão por resultados.</p>
+        </div>
+    </div>
+
+    <!-- Vantagem da EJ -->
+    <div class="bg-zinc-100 p-8 sm:p-12 rounded-3xl border border-zinc-200">
+        <h3 class="text-2xl font-black text-dark-900 mb-4">A força do Movimento Empresa Júnior (MEJ)</h3>
+        <p class="text-zinc-700 leading-relaxed mb-4 text-sm sm:text-base">
+            Ao contratar a Impacto Jr, você tem acesso à energia e atualização tecnológica constante de graduandos dedicados, com orientação de professores mestres e doutores e acesso a laboratórios acadêmicos.
+        </p>
+        <p class="text-zinc-700 leading-relaxed text-sm sm:text-base">
+            Como somos uma organização sem fins lucrativos, todo o valor arrecadado é reinvestido na capacitação da equipe e em ferramentas de trabalho, viabilizando investimentos substancialmente mais acessíveis do que consultorias seniores tradicionais.
+        </p>
+    </div>
+</section>
+{% endblock %}

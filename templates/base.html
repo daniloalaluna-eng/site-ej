@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Impacto Jr Consultoria{% endblock %}</title>
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            50: '#fef2f2',
+                            100: '#fee2e2',
+                            500: '#ef4444',
+                            600: '#dc2626',
+                            700: '#b91c1c',
+                            900: '#7f1d1d',
+                        },
+                        dark: {
+                            800: '#18181b',
+                            900: '#09090b',
+                            950: '#040405',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#fafafa] text-zinc-800 font-sans antialiased selection:bg-brand-600 selection:text-white flex flex-col min-h-screen">
+
+    <!-- Menu Superior com as Abas -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-zinc-200">
+        <div class="max-w-6xl mx-auto px-6 py-3.5 flex justify-between items-center">
+            
+            <a href="/" class="flex items-center gap-3.5 group">
+                <img src="/static/logo.jpeg" alt="Logo Impacto Jr" class="h-12 w-12 object-cover rounded-2xl shadow-sm border border-zinc-200 group-hover:scale-105 transition duration-200">
+                <div class="flex flex-col">
+                    <span class="text-xl sm:text-2xl font-black tracking-tight text-dark-900 leading-none">
+                        IMPACTO<span class="text-brand-600">JR</span>
+                    </span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-zinc-500 mt-1">Consultoria</span>
+                </div>
+            </a>
+
+            <!-- Links para as páginas reais -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-zinc-600">
+                <a href="/" class="hover:text-brand-600 transition">Início</a>
+                <a href="/servicos" class="hover:text-brand-600 transition">Serviços</a>
+                <a href="/sobre" class="hover:text-brand-600 transition">Sobre Nós</a>
+                <a href="/contato" class="bg-dark-900 text-white px-5 py-2.5 rounded-xl hover:bg-brand-600 transition shadow-sm font-bold">
+                    Solicitar Proposta
+                </a>
+            </div>
+
+            <!-- Botão Mobile -->
+            <a href="/contato" class="md:hidden bg-brand-600 text-white px-4 py-2 rounded-lg text-sm font-bold">
+                Contato
+            </a>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Dinâmico de cada Página -->
+    <main class="flex-grow pt-24">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Rodapé Comum -->
+    <footer class="bg-dark-900 border-t border-zinc-800 py-12 px-6 text-zinc-400 mt-20">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <span class="text-xl font-black tracking-tight text-white">
+                    IMPACTO<span class="text-brand-600">JR</span> CONSULTORIA
+                </span>
+                <p class="text-xs text-zinc-500 mt-1">&copy; 2026 Impacto Jr Consultoria. Todos os direitos reservados.</p>
+            </div>
+            <div class="flex gap-6 text-sm font-medium text-zinc-400">
+                <a href="/" class="hover:text-white transition">Início</a>
+                <a href="/servicos" class="hover:text-white transition">Serviços</a>
+                <a href="/sobre" class="hover:text-white transition">Sobre Nós</a>
+                <a href="/contato" class="hover:text-white transition">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5599999999999?text=Olá!%20Gostaria%20de%20um%20orçamento%20com%20a%20Impacto%20Jr." target="_blank" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-600 text-white p-4 rounded-full shadow-2xl transition hover:scale-110 z-50 flex items-center justify-center" title="Fale no WhatsApp">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.276-.1-.476-.15-.676.15-.2.3-.777.979-.952 1.18-.175.2-.351.226-.652.075-.3-.15-1.267-.467-2.414-1.49-.893-.796-1.496-1.78-1.671-2.08-.175-.3-.019-.462.131-.612.136-.135.301-.351.452-.527.15-.175.2-.3.301-.5.1-.2.05-.376-.025-.526-.075-.15-.676-1.63-.927-2.23-.244-.586-.492-.507-.676-.516l-.577-.01c-.2 0-.526.075-.802.376-.276.3-1.053 1.028-1.053 2.507 0 1.479 1.078 2.908 1.229 3.109.15.2 2.122 3.24 5.141 4.544.718.31 1.279.496 1.716.635.722.23 1.38.197 1.9.12.58-.087 1.78-.727 2.03-1.43.25-.702.25-1.303.175-1.43-.075-.126-.275-.201-.576-.351zM12 2a10 10 0 0 0-8.618 15.084L2 22l5.05-1.325A9.99 9.99 0 0 0 12 22a10 10 0 0 0 10-10A10 10 0 0 0 12 2z"/></svg>
+    </a>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block title %}Serviços | Impacto Jr Consultoria{% endblock %}
+
+{% block content %}
+<section class="py-16 px-6 max-w-6xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+        <h1 class="text-xs font-extrabold tracking-widest text-brand-600 uppercase mb-2">Portfólio Técnico</h1>
+        <h2 class="text-4xl font-black text-dark-900 mb-4">Nossas Áreas de Atuação</h2>
+        <p class="text-zinc-600 text-lg">Desenvolvemos soluções sob medida para indústrias, comércios e empreendedores com rigor técnico e foco em redução de custos.</p>
+    </div>
+
+    <!-- Container Grid: abre aqui -->
+    <div class="grid md:grid-cols-2 gap-8">
+        
+        <!-- Card 1 -->
+        <div class="bg-white p-8 rounded-2xl border border-zinc-200 shadow-sm hover:border-brand-600 transition">
+            <span class="text-brand-600 text-xs font-bold uppercase tracking-wider">Engenharia Mecânica</span>
+            <h3 class="text-2xl font-bold text-dark-900 mt-2 mb-3">Modelagem & Projetos Mecânicos 3D</h3>
+            <p class="text-zinc-600 text-sm leading-relaxed mb-4">
+                Desenvolvimento completo de componentes, mecanismos e dispositivos especiais. Criamos modelos digitais em 3D, simulação de esforços, detalhamento para corte, usinagem e montagem industrial.
+            </p>
+            <ul class="text-sm text-zinc-700 space-y-2 font-medium">
+                <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Desenhos técnicos executivos (ABNT)</li>
+                <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Otimização de peças e prototipagem</li>
+                <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Modelagem paramétrica e conjuntos</li>
+            </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white p-8 rounded-2xl border border-zinc-200 shadow-sm hover:border-brand-600 transition">
+            <span class="text-brand-600 text-xs font-bold uppercase tracking-wider">Normas & Segurança</span>
+            <h3 class="text-2xl font-bold text-dark-900 mt-2 mb-3">Climatização & Plano PMOC</h3>
+            <p class="text-zinc-600 text-sm leading-relaxed mb-4">
+                Elaboração do Plano de Manutenção, Operação e Controle para sistemas de ar-condicionado em edifícios comerciais e industriais, garantindo conformidade legal perante a ANVISA.
+            </p>
+            <ul class="text-sm text-zinc-700 space-y-2 font-medium">
+                <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Enquadramento na Lei 13.589/2018</li>
+                <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Melhoria da qualidade do ar interior</li>
+                <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Redução de consumo energético</li>
+            </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white p-8 rounded-2xl border border-zinc-200 shadow-sm hover:border-brand-600 transition">
+            <span class="text-brand-600 text-xs font-bold uppercase tracking-wider">Produtividade</span>
+            <h3 class="text-2xl font-bold text-dark-900 mt-2 mb-3">Gestão de Manutenção Industrial</h3>
+            <p class="text-zinc-600 text-sm leading-relaxed mb-4">
+                Estruturação de planos de manutenção preventiva e preditiva para equipamentos fabris, reduzindo custos com quebras não programadas.
+            </p>
+            <ul class="text-sm text-zinc-700 space-y-2 font-medium">
+                <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Cronogramas de manutenção preventiva</li>
+                <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Mapeamento de criticidade de máquinas</li>
+                <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Aumento do tempo médio entre falhas (MTBF)</li>
+            </ul>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white p-8 rounded-2xl border border-zinc-200 shadow-sm hover:border-brand-600 transition">
+            <span class="text-brand-600 text-xs font-bold uppercase tracking-wider">Conformidade Legal</span>
+            <h3 class="text-2xl font-bold text-dark-900 mt-2 mb-3">Adequação a Normas (NRs)</h3>
+            <p class="text-zinc-600 text-sm leading-relaxed mb-4">
+                Diagnóstico de máquinas e postos de trabalho para conformidade com normas regulamentadoras (como NR-12), visando segurança dos operadores e proteção jurídica.
+            </p>
+            <ul class="text-sm text-zinc-700 space-y-2 font-medium">
+                <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Análise preliminar de riscos mecânicos</li>
+                <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Propostas para proteções físicas</li>
+                <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Relatórios técnicos detalhados</li>
+            </ul>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-white p-8 rounded-2xl border border-zinc-200 shadow-sm hover:border-brand-600 transition">
+            <span class="text-brand-600 text-xs font-bold uppercase tracking-wider">Organização</span>
+            <h3 class="text-2xl font-bold text-dark-900 mt-2 mb-3">Análise e Tratamento de Dados</h3>
+            <p class="text-zinc-600 text-sm leading-relaxed mb-4">
+                Identificação de gargalos com técnicas de análise e tratamento de dados, transformando informação bruta em insights claros e acionáveis.
+            </p>
+            <ul class="text-sm text-zinc-700 space-y-2 font-medium">
+                <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Acompanhamento de indicadores</li>
+                <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Identificação de Gargalos Operacionais</li>
+                <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Auxílio a tomada de decisões estratégicas</li>
+            </ul>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-white p-8 rounded-2xl border border-zinc-200 shadow-sm hover:border-brand-600 transition">
+            <span class="text-brand-600 text-xs font-bold uppercase tracking-wider">Automatização</span>
+            <h3 class="text-2xl font-bold text-dark-900 mt-2 mb-3">Automação Industrial</h3>
+            <p class="text-zinc-600 text-sm leading-relaxed mb-4">
+                Te ajudamos a obter mais produtividade e eficiência para os seus processos através de soluções tecnológicas e dispositivos dedicados.
+            </p>
+            <ul class="text-sm text-zinc-700 space-y-2 font-medium">
+                <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Automação de sistemas e equipamentos</li>
+                <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Controle e monitoramento de processos</li>
+                <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Soluções inteligentes e inovadoras para a indústria</li>
+            </ul>
+        </div>
+
+    </div> <!-- Container Grid fecha aqui, com os 6 cards dentro -->
+
+    <div class="mt-16 text-center bg-zinc-900 text-white p-12 rounded-3xl">
+        <h3 class="text-2xl sm:text-3xl font-black mb-3">Precisa de um projeto sob medida?</h3>
+        <p class="text-zinc-400 max-w-xl mx-auto mb-6 text-sm">Nossos consultores realizam uma análise preliminar gratuita para entender sua necessidade.</p>
+        <a href="/contato" class="inline-block bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-3.5 rounded-xl transition">
+            Solicitar Proposta Agora
+        </a>
+    </div>
+</section>
+{% endblock %}
