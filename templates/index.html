@@ -1,150 +1,312 @@
 {% extends "base.html" %}
 
-{% block title %}Impacto Jr | Engenharia Mecânica & Consultoria Estratégica{% endblock %}
+{% block title %}Impacto Jr | Engenharia Mecânica de Alta Performance{% endblock %}
 
 {% block content %}
-<!-- HERO SECTION INNOVATION -->
-<section class="relative overflow-hidden pt-12 pb-24 px-6 bg-gradient-to-b from-white via-zinc-50 to-[#fafafa]">
-    <!-- Efeito de iluminação sutil de fundo -->
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-brand-600/5 blur-[120px] rounded-full pointer-events-none"></div>
+<!-- Grid Técnico Sutil no Fundo -->
+<style>
+    .bg-tech-grid {
+        background-size: 40px 40px;
+        background-image: 
+            linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    }
+</style>
+
+<!-- HERO SECTION -->
+<section class="relative overflow-hidden pt-12 pb-20 px-6 bg-tech-grid border-b border-zinc-200">
+    <!-- Glow de Destaque Vermelho -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-brand-600/10 blur-[130px] rounded-full pointer-events-none"></div>
 
     <div class="relative max-w-5xl mx-auto text-center">
-        <!-- Badge de Inovação -->
-        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-zinc-900 text-white text-xs font-bold tracking-wider uppercase mb-8 shadow-sm">
-            <span class="w-2 h-2 rounded-full bg-brand-500 animate-ping"></span>
-            Consultoria Universitária de Alta Precisão
+        <!-- Tag de Destaque -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-dark-900 text-white text-xs font-bold tracking-wider uppercase mb-8 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-brand-600 animate-ping"></span>
+            Consultoria e Soluções em Engenharia Mecânica • UFJF
         </div>
         
-        <!-- Título de Forte Impacto -->
+        <!-- Título -->
         <h1 class="text-4xl sm:text-6xl md:text-7xl font-black text-dark-900 tracking-tight leading-[1.08] mb-8">
-            Engenharia que transforma <br class="hidden sm:inline">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-red-700">potencial em resultado real.</span>
+            Precisão técnica para gerar <br class="hidden sm:inline">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-red-600 to-dark-900">
+                resultados industriais reais.
+            </span>
         </h1>
         
-        <!-- Descrição Clara de Valor -->
         <p class="text-lg sm:text-xl text-zinc-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-            Soluções completas em modelagem mecânica 3D, automação, climatização (PMOC) e gestão industrial. Desenvolvemos o futuro do seu negócio com rigor acadêmico e investimento acessível.
+            Eliminamos gargalos operacionais, adequamos seu negócio a normas técnicas e projetamos máquinas sob medida com supervisão de doutores da universidade e custo acessível.
         </p>
 
-        <!-- Ações Principais -->
+        <!-- Botões -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <a href="/contato" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-brand-600/20 hover:shadow-brand-600/30 hover:-translate-y-0.5 transition duration-200">
-                <span>Solicitar Diagnóstico Gratuito</span>
+            <a href="/contato" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-brand-600/25 hover:-translate-y-0.5 transition duration-200">
+                <span>Solicitar Diagnóstico Técnico Gratuito</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </a>
-            <a href="/servicos" class="w-full sm:w-auto bg-white hover:bg-zinc-100 text-dark-900 font-bold px-8 py-4 rounded-xl border border-zinc-300 shadow-sm transition">
-                Explorar Soluções
+            <a href="#simulador" class="w-full sm:w-auto bg-white hover:bg-zinc-100 text-dark-900 font-bold px-8 py-4 rounded-xl border border-zinc-300 shadow-sm transition">
+                Simulador de Necessidade ↓
             </a>
         </div>
 
-        <!-- Barra de Métricas / Credibilidade (O site antigo não tinha isso destacado) -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-8 border-t border-zinc-200/80">
-            <div class="p-4 bg-white/60 backdrop-blur rounded-xl border border-zinc-200/60">
+        <!-- Barra de Autoridade -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-8 border-t border-zinc-300/70">
+            <div class="p-4 bg-white/80 backdrop-blur rounded-2xl border border-zinc-200 shadow-sm">
                 <div class="text-3xl font-black text-dark-900">+10 Anos</div>
-                <div class="text-xs font-semibold text-zinc-500 uppercase tracking-wider mt-1">Tradição & Inovação</div>
+                <div class="text-xs font-semibold text-zinc-500 uppercase tracking-wider mt-1">Desde 2014 no mercado</div>
             </div>
-            <div class="p-4 bg-white/60 backdrop-blur rounded-xl border border-zinc-200/60">
+            <div class="p-4 bg-white/80 backdrop-blur rounded-2xl border border-zinc-200 shadow-sm">
                 <div class="text-3xl font-black text-brand-600">100%</div>
                 <div class="text-xs font-semibold text-zinc-500 uppercase tracking-wider mt-1">Supervisão Docente</div>
             </div>
-            <div class="p-4 bg-white/60 backdrop-blur rounded-xl border border-zinc-200/60">
-                <div class="text-3xl font-black text-dark-900">+100</div>
-                <div class="text-xs font-semibold text-zinc-500 uppercase tracking-wider mt-1">Projetos Executados</div>
+            <div class="p-4 bg-white/80 backdrop-blur rounded-2xl border border-zinc-200 shadow-sm">
+                <div class="text-3xl font-black text-dark-900">+120</div>
+                <div class="text-xs font-semibold text-zinc-500 uppercase tracking-wider mt-1">Projetos Concluídos</div>
             </div>
-            <div class="p-4 bg-white/60 backdrop-blur rounded-xl border border-zinc-200/60">
-                <div class="text-3xl font-black text-dark-900">MEJ</div>
-                <div class="text-xs font-semibold text-zinc-500 uppercase tracking-wider mt-1">Reconhecimento Oficial</div>
+            <div class="p-4 bg-white/80 backdrop-blur rounded-2xl border border-zinc-200 shadow-sm">
+                <div class="text-3xl font-black text-dark-900">40% a 60%</div>
+                <div class="text-xs font-semibold text-zinc-500 uppercase tracking-wider mt-1">Economia vs. Mercado</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- SEÇÃO: NOSSO MÉTODO DE ENTREGA (Diferencial Tecnológico) -->
-<section class="py-20 px-6 max-w-6xl mx-auto">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs font-extrabold tracking-widest text-brand-600 uppercase">Metodologia Ágil</span>
-        <h2 class="text-3xl sm:text-4xl font-black text-dark-900 mt-2">Como seu projeto sai do papel</h2>
-        <p class="text-zinc-500 text-sm mt-3">Segurança e transparência do primeiro contato até o resultado final.</p>
-    </div>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Passo 1 -->
-        <div class="relative bg-white p-7 rounded-2xl border border-zinc-200 shadow-sm hover:border-brand-600 transition">
-            <span class="text-4xl font-black text-zinc-200 select-none">01</span>
-            <h3 class="text-lg font-bold text-dark-900 mt-3 mb-2">Diagnóstico Gratuito</h3>
-            <p class="text-zinc-600 text-xs leading-relaxed">Nossa equipe analisa seus processos e necessidades técnicas sem compromisso financeiro inicial.</p>
-        </div>
-
-        <!-- Passo 2 -->
-        <div class="relative bg-white p-7 rounded-2xl border border-zinc-200 shadow-sm hover:border-brand-600 transition">
-            <span class="text-4xl font-black text-zinc-200 select-none">02</span>
-            <h3 class="text-lg font-bold text-dark-900 mt-3 mb-2">Proposta Personalizada</h3>
-            <p class="text-zinc-600 text-xs leading-relaxed">Estruturação de cronograma detalhado, entregáveis e orçamento sem custos inflacionados.</p>
-        </div>
-
-        <!-- Passo 3 -->
-        <div class="relative bg-white p-7 rounded-2xl border border-zinc-200 shadow-sm hover:border-brand-600 transition">
-            <span class="text-4xl font-black text-zinc-200 select-none">03</span>
-            <h3 class="text-lg font-bold text-dark-900 mt-3 mb-2">Execução & Validação</h3>
-            <p class="text-zinc-600 text-xs leading-relaxed">Desenvolvimento técnico em softwares avançados, validado por professores doutores da universidade.</p>
-        </div>
-
-        <!-- Passo 4 -->
-        <div class="relative bg-white p-7 rounded-2xl border border-zinc-200 shadow-sm hover:border-brand-600 transition">
-            <span class="text-4xl font-black text-brand-600 select-none">04</span>
-            <h3 class="text-lg font-bold text-dark-900 mt-3 mb-2">Entrega & Suporte</h3>
-            <p class="text-zinc-600 text-xs leading-relaxed">Apresentação dos relatórios, desenhos executivos e acompanhamento pós-entrega.</p>
-        </div>
-    </div>
-</section>
-
-<!-- SEÇÃO: GRID DE SOLUÇÕES (Apresentação Rápida) -->
-<section class="py-20 bg-zinc-900 text-white px-6">
+<!-- SEGMENTOS ATENDIDOS (Faixa de Confiança) -->
+<section class="py-10 bg-white border-b border-zinc-200 px-6">
     <div class="max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-14">
+        <p class="text-center text-xs font-bold text-zinc-600 uppercase tracking-widest mb-6">Setores em que geramos valor comprovado</p>
+        <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-12 text-zinc-600 font-bold text-sm">
+            <span class="flex items-center gap-2">⚙️ Indústria Metalmecânica</span>
+            <span class="flex items-center gap-2">❄️ Comércios & Clínicas (PMOC)</span>
+            <span class="flex items-center gap-2">🏭 Fábricas & Linhas de Produção</span>
+            <span class="flex items-center gap-2">💡 Startups & Empreendedores de Hardware</span>
+        </div>
+    </div>
+</section>
+
+<!-- SIMULADOR INTERATIVO DE DIAGNÓSTICO (Inovação exclusiva) -->
+<section id="simulador" class="py-20 px-6 max-w-5xl mx-auto">
+    <div class="bg-dark-900 text-white p-8 sm:p-12 rounded-3xl shadow-xl border border-zinc-800">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-xs font-extrabold tracking-widest text-brand-500 uppercase">Ferramenta Interativa</span>
+            <h2 class="text-3xl font-black mt-2">Qual é o desafio principal da sua empresa?</h2>
+            <p class="text-zinc-400 text-sm mt-2">Selecione uma opção abaixo para ver a solução técnica recomendada:</p>
+        </div>
+
+        <!-- Opções Clicáveis -->
+        <div class="grid sm:grid-cols-3 gap-4 mb-8">
+            <button onclick="mostrarSolucao('pmoc')" id="btn-pmoc" class="sim-btn p-5 rounded-2xl border border-zinc-700 bg-zinc-800/80 hover:border-brand-600 text-left transition active-sim">
+                <span class="text-xl mb-2 block">❄️</span>
+                <div class="font-bold text-sm">Ar-Condicionado & Fiscalização</div>
+                <div class="text-xs text-zinc-400 mt-1">Preciso de laudo ou plano PMOC para a ANVISA.</div>
+            </button>
+
+            <button onclick="mostrarSolucao('projeto')" id="btn-projeto" class="sim-btn p-5 rounded-2xl border border-zinc-700 bg-zinc-800/80 hover:border-brand-600 text-left transition">
+                <span class="text-xl mb-2 block">📐</span>
+                <div class="font-bold text-sm">Peça ou Máquina Nova</div>
+                <div class="text-xs text-zinc-400 mt-1">Quero modelar em 3D, validar e fabricar.</div>
+            </button>
+
+            <button onclick="mostrarSolucao('manutencao')" id="btn-manutencao" class="sim-btn p-5 rounded-2xl border border-zinc-700 bg-zinc-800/80 hover:border-brand-600 text-left transition">
+                <span class="text-xl mb-2 block">⚙️</span>
+                <div class="font-bold text-sm">Máquinas Quebrando / Paradas</div>
+                <div class="text-xs text-zinc-400 mt-1">Preciso reduzir custos e organizar a manutenção.</div>
+            </button>
+        </div>
+
+        <!-- Painel Dinâmico de Resposta -->
+        <div id="resultado-simulador" class="p-6 rounded-2xl bg-zinc-800/90 border border-brand-600/40 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
             <div>
-                <span class="text-xs font-extrabold tracking-widest text-brand-500 uppercase">Capacidade Técnica</span>
-                <h2 class="text-3xl sm:text-4xl font-black mt-2">Soluções de Engenharia</h2>
+                <span class="text-xs font-bold text-brand-500 uppercase tracking-wider" id="sim-tag">Solução Recomendada</span>
+                <h4 class="text-xl font-bold text-white mt-1" id="sim-titulo">Elaboração de PMOC Completo</h4>
+                <p class="text-xs text-zinc-300 mt-2 max-w-xl" id="sim-desc">
+                    Mapeamento de todos os aparelhos de climatização, cálculo de carga térmica, checklist de rotinas preventivas e emissão de laudo técnico em conformidade com a Lei 13.589/2018.
+                </p>
             </div>
-            <a href="/servicos" class="mt-4 md:mt-0 text-sm font-bold text-brand-500 hover:text-white transition flex items-center gap-1.5">
-                Ver detalhamento de todos os 6 serviços &rarr;
+            <a href="/contato" class="whitespace-nowrap bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold px-6 py-3.5 rounded-xl transition">
+                Pedir Diagnóstico Deste Serviço →
             </a>
         </div>
+    </div>
+</section>
 
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="bg-zinc-800/80 border border-zinc-700/60 p-6 rounded-2xl hover:border-brand-600 transition group">
-                <div class="w-10 h-10 rounded-lg bg-brand-600/20 text-brand-500 flex items-center justify-center font-bold mb-4 group-hover:bg-brand-600 group-hover:text-white transition">01</div>
-                <h3 class="text-lg font-bold mb-2">Modelagem & Projetos Mecânicos</h3>
-                <p class="text-xs text-zinc-400 leading-relaxed">Desenho técnico executivo, modelagem tridimensional de máquinas e simulação estática e dinâmica.</p>
+<!-- CASES DE SUCESSO E RESULTADOS (Prova Real) -->
+<section class="py-16 px-6 max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-extrabold tracking-widest text-brand-600 uppercase">Impacto Comprovado</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-dark-900 mt-2">Casos Reais em que atuamos</h2>
+        <p class="text-zinc-500 text-sm mt-2">Resultados práticos entregues para clientes de diferentes portes.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+        <!-- Case 1 -->
+        <div class="bg-white p-8 rounded-2xl border border-zinc-200 shadow-sm flex flex-col justify-between">
+            <div>
+                <span class="px-3 py-1 rounded-md bg-zinc-100 text-zinc-700 text-[11px] font-bold uppercase">Climatização Comercial</span>
+                <h3 class="text-xl font-bold text-dark-900 mt-4 mb-2">Adequação Sanitária & PMOC</h3>
+                <p class="text-xs text-zinc-600 leading-relaxed">
+                    Estruturação de plano preventivo para mais de 30 condicionadores de ar em clínica médica, eliminando riscos de multas da vigilância e reduzindo consumo de energia.
+                </p>
             </div>
-
-            <div class="bg-zinc-800/80 border border-zinc-700/60 p-6 rounded-2xl hover:border-brand-600 transition group">
-                <div class="w-10 h-10 rounded-lg bg-brand-600/20 text-brand-500 flex items-center justify-center font-bold mb-4 group-hover:bg-brand-600 group-hover:text-white transition">02</div>
-                <h3 class="text-lg font-bold mb-2">Climatização & Plano PMOC</h3>
-                <p class="text-xs text-zinc-400 leading-relaxed">Adequação integral à Lei 13.589/2018 e vigilância sanitária para segurança dos ocupantes e economia de energia.</p>
-            </div>
-
-            <div class="bg-zinc-800/80 border border-zinc-700/60 p-6 rounded-2xl hover:border-brand-600 transition group">
-                <div class="w-10 h-10 rounded-lg bg-brand-600/20 text-brand-500 flex items-center justify-center font-bold mb-4 group-hover:bg-brand-600 group-hover:text-white transition">03</div>
-                <h3 class="text-lg font-bold mb-2">Automação & Processos</h3>
-                <p class="text-xs text-zinc-400 leading-relaxed">Sistemas dedicados para automatizar linhas produtivas, reduzir falhas humanas e maximizar rentabilidade.</p>
+            <div class="pt-6 mt-6 border-t border-zinc-100 flex items-center justify-between text-xs">
+                <span class="font-bold text-brand-600">100% Regularizado</span>
+                <span class="text-zinc-600 font-medium">Lei 13.589/2018</span>
             </div>
         </div>
+
+        <!-- Case 2 -->
+        <div class="bg-white p-8 rounded-2xl border border-zinc-200 shadow-sm flex flex-col justify-between">
+            <div>
+                <span class="px-3 py-1 rounded-md bg-zinc-100 text-zinc-700 text-[11px] font-bold uppercase">Engenharia de Produto</span>
+                <h3 class="text-xl font-bold text-dark-900 mt-4 mb-2">Prototipagem de Dispositivo Mecânico</h3>
+                <p class="text-xs text-zinc-600 leading-relaxed">
+                    Modelagem 3D e detalhamento para corte a laser e usinagem de um mecanismo de acionamento automático sob encomenda para cliente industrial.
+                </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-zinc-100 flex items-center justify-between text-xs">
+                <span class="font-bold text-brand-600">Pronto para fabricação</span>
+                <span class="text-zinc-600 font-medium">Normas ABNT</span>
+            </div>
+        </div>
+
+        <!-- Case 3 -->
+        <div class="bg-white p-8 rounded-2xl border border-zinc-200 shadow-sm flex flex-col justify-between">
+            <div>
+                <span class="px-3 py-1 rounded-md bg-zinc-100 text-zinc-700 text-[11px] font-bold uppercase">Gestão Operacional</span>
+                <h3 class="text-xl font-bold text-dark-900 mt-4 mb-2">Mapeamento e Redução de Paradas</h3>
+                <p class="text-xs text-zinc-600 leading-relaxed">
+                    Criação de matriz de criticidade e cronograma preventivo para maquinário fabril, aumentando o tempo médio entre quebras e reduzindo custos com trocas emergenciais.
+                </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-zinc-100 flex items-center justify-between text-xs">
+                <span class="font-bold text-brand-600">-35% em manutenções corretivas</span>
+                <span class="text-zinc-600 font-medium">Indústria Local</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SEÇÃO DE DEPOIMENTOS (Prova Social Humana) -->
+<section class="py-16 bg-zinc-100 border-y border-zinc-200 px-6">
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-xs font-extrabold tracking-widest text-brand-600 uppercase">Avaliações</span>
+            <h2 class="text-3xl font-black text-dark-900 mt-2">O que dizem sobre nosso trabalho</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white p-8 rounded-2xl border border-zinc-200 shadow-sm">
+                <div class="text-amber-500 text-sm mb-3">★★★★★</div>
+                <p class="text-zinc-700 text-sm leading-relaxed italic mb-6">
+                    "A equipe da Impacto Jr entregou o projeto com um nível de detalhamento técnico que superou nossas expectativas. O suporte dos professores orientadores nos deu total confiança para executar."
+                </p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-dark-900 text-white flex items-center justify-center font-bold text-xs">GS</div>
+                    <div>
+                        <div class="text-xs font-bold text-dark-900">Gerente de Operações</div>
+                        <div class="text-[11px] text-zinc-500">Setor Metalúrgico</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-zinc-200 shadow-sm">
+                <div class="text-amber-500 text-sm mb-3">★★★★★</div>
+                <p class="text-zinc-700 text-sm leading-relaxed italic mb-6">
+                    "Excelente atendimento no nosso plano de climatização. Conseguimos cumprir as exigências da fiscalização sanitária em prazo recorde e com custo muito viável."
+                </p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold text-xs">DC</div>
+                    <div>
+                        <div class="text-xs font-bold text-dark-900">Diretora Administrativa</div>
+                        <div class="text-[11px] text-zinc-500">Complexo de Saúde Integrada</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SEÇÃO FAQ (Quebra de Objeções) -->
+<section class="py-20 px-6 max-w-4xl mx-auto">
+    <div class="text-center mb-12">
+        <span class="text-xs font-extrabold tracking-widest text-brand-600 uppercase">Dúvidas Frequentes</span>
+        <h2 class="text-3xl font-black text-dark-900 mt-2">Perguntas comuns antes de contratar</h2>
+    </div>
+
+    <div class="space-y-4">
+        <details class="group bg-white p-6 rounded-2xl border border-zinc-200 shadow-sm cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex justify-between items-center font-bold text-dark-900 text-sm sm:text-base">
+                <span>Os projetos de uma Empresa Júnior têm validade técnica no mercado?</span>
+                <span class="text-brand-600 group-open:rotate-180 transition transform font-black text-lg">↓</span>
+            </summary>
+            <p class="text-xs sm:text-sm text-zinc-600 mt-4 leading-relaxed">
+                Sim! Todos os nossos projetos são desenvolvidos com rigorosa metodologia de engenharia e supervisionados diretamente por professores doutores e especialistas da Universidade Federal de Juiz de Fora (UFJF). Quando há necessidade de emissão de ART (Anotação de Responsabilidade Técnica), o processo é devidamente estruturado em conformidade com o CREA.
+            </p>
+        </details>
+
+        <details class="group bg-white p-6 rounded-2xl border border-zinc-200 shadow-sm cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex justify-between items-center font-bold text-dark-900 text-sm sm:text-base">
+                <span>Por que o orçamento é mais acessível que o de consultorias tradicionais?</span>
+                <span class="text-brand-600 group-open:rotate-180 transition transform font-black text-lg">↓</span>
+            </summary>
+            <p class="text-xs sm:text-sm text-zinc-600 mt-4 leading-relaxed">
+                A Impacto Jr é uma associação civil sem fins lucrativos. Todo o valor arrecadado em nossos projetos é reinvestido diretamente na capacitação dos membros e em tecnologia de ponta. Não temos custos com lucros de sócios, viabilizando investimentos de 40% a 60% menores do que empresas seniores.
+            </p>
+        </details>
+
+        <details class="group bg-white p-6 rounded-2xl border border-zinc-200 shadow-sm cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex justify-between items-center font-bold text-dark-900 text-sm sm:text-base">
+                <span>Como funciona o primeiro contato e diagnóstico?</span>
+                <span class="text-brand-600 group-open:rotate-180 transition transform font-black text-lg">↓</span>
+            </summary>
+            <p class="text-xs sm:text-sm text-zinc-600 mt-4 leading-relaxed">
+                Você preenche o formulário ou nos chama no WhatsApp. Marcamos uma reunião (presencial ou online) para entender a sua necessidade técnica. Elaboramos uma proposta com escopo, prazos e investimento detalhados, tudo sem nenhum compromisso financeiro inicial.
+            </p>
+        </details>
     </div>
 </section>
 
 <!-- CALL TO ACTION FINAL -->
-<section class="py-20 px-6 max-w-4xl mx-auto text-center">
-    <div class="bg-gradient-to-br from-zinc-900 to-black text-white p-10 sm:p-14 rounded-3xl shadow-xl border border-zinc-800 relative overflow-hidden">
-        <div class="relative z-10">
-            <h2 class="text-3xl sm:text-4xl font-black mb-4">Pronto para dar o próximo passo?</h2>
-            <p class="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto mb-8">
-                Fale com nossos consultores técnicos e receba uma análise preliminar sem custo para o seu empreendimento.
-            </p>
-            <a href="/contato" class="inline-block bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition hover:scale-105">
-                Solicitar Proposta Técnica
-            </a>
-        </div>
+<section class="py-16 px-6 max-w-4xl mx-auto text-center">
+    <div class="bg-gradient-to-br from-zinc-900 via-dark-900 to-black text-white p-10 sm:p-14 rounded-3xl shadow-2xl border border-zinc-800">
+        <h2 class="text-3xl sm:text-4xl font-black mb-4">Tem um desafio na sua operação?</h2>
+        <p class="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto mb-8">
+            Nossa diretoria técnica está pronta para avaliar seu caso e propor uma solução sob medida.
+        </p>
+        <a href="/contato" class="inline-block bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-brand-600/30 transition hover:scale-105">
+            Solicitar Proposta sem Compromisso
+        </a>
     </div>
 </section>
+
+<!-- Script do Simulador Interativo -->
+<script>
+    function mostrarSolucao(tipo) {
+        const titulo = document.getElementById('sim-titulo');
+        const desc = document.getElementById('sim-desc');
+        const tag = document.getElementById('sim-tag');
+
+        // Remove estilo ativo de todos
+        document.querySelectorAll('.sim-btn').forEach(b => {
+            b.classList.remove('border-brand-600', 'bg-zinc-800');
+            b.classList.add('border-zinc-700');
+        });
+
+        if (tipo === 'pmoc') {
+            document.getElementById('btn-pmoc').classList.add('border-brand-600', 'bg-zinc-800');
+            tag.innerText = "Solução em Climatização";
+            titulo.innerText = "Plano de Manutenção, Operação e Controle (PMOC)";
+            desc.innerText = "Diagnóstico completo da sua carga térmica, rotinas periódicas de higienização de filtros, laudos de conformidade com a Lei 13.589/2018 e garantia de conformidade com a vigilância sanitária.";
+        } else if (tipo === 'projeto') {
+            document.getElementById('btn-projeto').classList.add('border-brand-600', 'bg-zinc-800');
+            tag.innerText = "Solução em Projetos Mecânicos";
+            titulo.innerText = "Modelagem 3D & Detalhamento para Fabricação";
+            desc.innerText = "Desenvolvimento de dispositivos industriais, modelagem CAD paramétrica, desenhos executivos com tolerâncias conforme ABNT e simulação de resistência para validação antes da usinagem.";
+        } else if (tipo === 'manutencao') {
+            document.getElementById('btn-manutencao').classList.add('border-brand-600', 'bg-zinc-800');
+            tag.innerText = "Solução em Gestão Industrial";
+            titulo.innerText = "Plano Preventivo & Mapeamento de Gargalos";
+            desc.innerText = "Identificação das máquinas críticas da fábrica, elaboração de rotinas de manutenção preventiva e padronização operacional para zerar paradas não planejadas da produção.";
+        }
+    }
+</script>
 {% endblock %}
